@@ -7,7 +7,6 @@ class MyQueue:
     def push(self, x: int) -> None:
         self.stack_in.append(x)
 
-        
 
     def pop(self) -> int:
         if not self.stack_out:
@@ -15,7 +14,7 @@ class MyQueue:
                 self.stack_out.append(self.stack_in.pop())
         if not self.stack_out:
             raise ValueError
-        return self.stack_out.pop()        
+        return self.stack_out.pop()
 
     def peek(self) -> int:
         if not self.stack_out:
